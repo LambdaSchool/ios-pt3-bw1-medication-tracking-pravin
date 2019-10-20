@@ -14,15 +14,15 @@ class MedicationDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.updateViews()
+        //self.updateViews()
 
     }
 
     // MARK: - Navigation
     
-    private func updateViews() {
-        if let controller = self.medicationController {
+    //private func updateViews() {
+      //  if let controller = self.medicationController {
             
         }
-    }
-}
+   // }
+//}
