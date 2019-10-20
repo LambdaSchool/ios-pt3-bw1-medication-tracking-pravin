@@ -22,12 +22,12 @@ class MedicationCollectionViewController: UICollectionViewController {
   
     // MARK: - Navigation
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "MedTracker" {
-            guard let medicationDetailVC = segue.destination as? MedicationDetailViewController else { return }
-            medicationDetailVC.medicationController = self.medicationController
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "MedTracker" {
+//            guard let medicationDetailVC = segue.destination as? MedicationDetailViewController else { return }
+//            medicationDetailVC.medicationController = self.medicationController
+//        }
+//    }
 
 
     // MARK: UICollectionViewDataSource
@@ -42,7 +42,7 @@ class MedicationCollectionViewController: UICollectionViewController {
         let MedicationItem = self.medicationController.medicationItems[indexPath.item]
         cell.nameLabel.text = MedicationItem.name
         cell.imageView.image = UIImage(named: MedicationItem.name)
-        cell.hasBeenTakenLabel.text = MedicationItem.hasBeenTaken ? "Taken" : "Not Taken"
+        cell.hasBeenTaken.text = MedicationItem.hasBeenTaken ? "Taken" : "Not Taken"
         cell.delegate = self
     
         return cell

@@ -39,7 +39,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MedicatonItemCell" id="mAV-VQ-UQF">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MedicatonItemCell" id="mAV-VQ-UQF" customClass="MedicationItemCollectionViewCell" customModule="MedicationTracker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xqP-yZ-bfe">
@@ -79,6 +79,7 @@
                                                         <constraint firstAttribute="width" constant="120" id="xEC-1H-r4o"/>
                                                     </constraints>
                                                     <connections>
+                                                        <action selector="medicationItemTapped:" destination="mAV-VQ-UQF" eventType="touchUpInside" id="ebu-rp-hLh"/>
                                                         <segue destination="WWh-an-VAz" kind="show" identifier="ToDetail" id="v8H-TT-WEx"/>
                                                     </connections>
                                                 </button>
@@ -104,6 +105,11 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="120" height="140"/>
+                                <connections>
+                                    <outlet property="hasBeenTaken" destination="ZDS-Mb-Z6I" id="2HR-mL-76J"/>
+                                    <outlet property="imageView" destination="idU-hH-pfp" id="ofZ-gG-2lC"/>
+                                    <outlet property="nameLabel" destination="ofU-ZD-CS7" id="Tu3-Rg-uG1"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -181,6 +187,6 @@
         <image name="plus.rectangle.fill" catalog="system" width="64" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="v8H-TT-WEx"/>
+        <segue reference="ocG-cB-Cow"/>
     </inferredMetricsTieBreakers>
 </document>
