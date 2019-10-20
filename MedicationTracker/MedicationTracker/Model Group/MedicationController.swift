@@ -1,5 +1,5 @@
 //
-//  MedicationListController.swift
+//  MedicationController.swift
 //  MedicationTracker
 //
 //  Created by patelpra on 10/17/19.
@@ -8,7 +8,9 @@
 
 import Foundation
 
-
+class MedicationController {
+    
+    
 
 
 // MARK: - Variables
@@ -37,5 +39,6 @@ private func setMedicationItems() {
     let itemNames = ["Tumeric", "Cinnamon", "Multi-Vitamin", "Qnoul-COQ10", "Bayer Asprin", "Alegra-D"]
     for name in itemNames {
         createMedicationItem(withName: name)
+        }
     }
 }
