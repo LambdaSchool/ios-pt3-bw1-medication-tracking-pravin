@@ -10,7 +10,6 @@
 		AB31D2A9235B7C46002C4016 /* MedicationCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31D2A8235B7C46002C4016 /* MedicationCollectionViewController.swift */; };
 		AB7446C12357E80800334006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7446C02357E80800334006 /* AppDelegate.swift */; };
 		AB7446C32357E80800334006 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7446C22357E80800334006 /* SceneDelegate.swift */; };
-		AB7446C52357E80800334006 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7446C42357E80800334006 /* ViewController.swift */; };
 		AB7446C82357E80800334006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7446C62357E80800334006 /* Main.storyboard */; };
 		AB7446CA2357E80A00334006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB7446C92357E80A00334006 /* Assets.xcassets */; };
 		AB7446CD2357E80B00334006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7446CB2357E80B00334006 /* LaunchScreen.storyboard */; };
@@ -21,6 +20,7 @@
 		AB80D697235966AB007B67E6 /* MedicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80D696235966AB007B67E6 /* MedicationController.swift */; };
 		AB80D69B235B7651007B67E6 /* MedicationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80D69A235B7651007B67E6 /* MedicationDetailViewController.swift */; };
 		ABCC19D4235CB72500A915D0 /* MedicationItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCC19D3235CB72500A915D0 /* MedicationItemCollectionViewCell.swift */; };
+		ABE596F5235CFC2800AB52AC /* MedicationCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE596F4235CFC2800AB52AC /* MedicationCollectionViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,6 @@
 		AB7446BD2357E80800334006 /* MedicationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7446C02357E80800334006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB7446C22357E80800334006 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB7446C42357E80800334006 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB7446C72357E80800334006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB7446C92357E80A00334006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB7446CC2357E80B00334006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		AB80D696235966AB007B67E6 /* MedicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationController.swift; sourceTree = "<group>"; };
 		AB80D69A235B7651007B67E6 /* MedicationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationDetailViewController.swift; sourceTree = "<group>"; };
 		ABCC19D3235CB72500A915D0 /* MedicationItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABE596F4235CFC2800AB52AC /* MedicationCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationCollectionViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +75,10 @@
 		AB7446BF2357E80800334006 /* MedicationTracker */ = {
 			isa = PBXGroup;
 			children = (
-				ABCC19D2235CB6D400A915D0 /* ViewCells */,
 				AB7446D42357E83C00334006 /* Model Group */,
 				AB80D6652357E8A6007B67E6 /* Resource Group */,
 				AB80D6662357E8E1007B67E6 /* ViewControllers Group */,
+				ABCC19D2235CB6D400A915D0 /* ViewCells */,
 				AB80D6672357E909007B67E6 /* Storyboard */,
 			);
 			path = MedicationTracker;
@@ -89,6 +89,7 @@
 			children = (
 				AB80D694235965A4007B67E6 /* MedicationItem.swift */,
 				AB80D696235966AB007B67E6 /* MedicationController.swift */,
+				ABE596F4235CFC2800AB52AC /* MedicationCollectionViewDelegate.swift */,
 			);
 			path = "Model Group";
 			sourceTree = "<group>";
@@ -107,7 +108,6 @@
 		AB80D6662357E8E1007B67E6 /* ViewControllers Group */ = {
 			isa = PBXGroup;
 			children = (
-				AB7446C42357E80800334006 /* ViewController.swift */,
 				AB31D2A8235B7C46002C4016 /* MedicationCollectionViewController.swift */,
 				AB80D69A235B7651007B67E6 /* MedicationDetailViewController.swift */,
 			);
@@ -205,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB7446C52357E80800334006 /* ViewController.swift in Sources */,
+				ABE596F5235CFC2800AB52AC /* MedicationCollectionViewDelegate.swift in Sources */,
 				AB7446C12357E80800334006 /* AppDelegate.swift in Sources */,
 				AB7446C32357E80800334006 /* SceneDelegate.swift in Sources */,
 				AB80D695235965A4007B67E6 /* MedicationItem.swift in Sources */,

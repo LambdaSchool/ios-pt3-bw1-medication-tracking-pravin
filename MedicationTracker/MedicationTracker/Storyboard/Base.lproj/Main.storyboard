@@ -78,6 +78,9 @@
                                                         <constraint firstAttribute="height" constant="140" id="LZG-8o-i0Q"/>
                                                         <constraint firstAttribute="width" constant="120" id="xEC-1H-r4o"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <segue destination="WWh-an-VAz" kind="show" identifier="ToDetail" id="v8H-TT-WEx"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -128,17 +131,56 @@
                     <view key="view" contentMode="scaleToFill" id="e7N-Qp-yRP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AZr-Dq-Tp8">
+                                <rect key="frame" x="20" y="238" width="374" height="601"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="601" id="bdS-HU-KVN"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="310" translatesAutoresizingMaskIntoConstraints="NO" id="1Gf-5p-IK7">
+                                <rect key="frame" x="20" y="167" width="374" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zkx-Lt-VIA">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oN8-UH-GDh">
+                                        <rect key="frame" x="342" y="0.0" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AZr-Dq-Tp8" firstAttribute="leading" secondItem="1Gf-5p-IK7" secondAttribute="leading" id="L6C-p0-oZ6"/>
+                            <constraint firstItem="AZr-Dq-Tp8" firstAttribute="top" secondItem="1Gf-5p-IK7" secondAttribute="bottom" constant="37" id="UkV-oj-WUd"/>
+                            <constraint firstItem="AZr-Dq-Tp8" firstAttribute="leading" secondItem="bpF-7M-R75" secondAttribute="leading" constant="20" id="gE5-ch-ZFk"/>
+                            <constraint firstItem="bpF-7M-R75" firstAttribute="bottom" secondItem="AZr-Dq-Tp8" secondAttribute="bottom" constant="23" id="ir2-UG-3Sr"/>
+                            <constraint firstItem="bpF-7M-R75" firstAttribute="trailing" secondItem="AZr-Dq-Tp8" secondAttribute="trailing" constant="20" id="vqS-ej-b16"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bpF-7M-R75"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Z2G-0R-kNk"/>
+                    <navigationItem key="navigationItem" id="Z2G-0R-kNk">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="CvJ-k3-flV"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCn-UI-WNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971" y="159"/>
+            <point key="canvasLocation" x="969.56521739130437" y="158.70535714285714"/>
         </scene>
     </scenes>
     <resources>
         <image name="plus.rectangle.fill" catalog="system" width="64" height="46"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="v8H-TT-WEx"/>
+    </inferredMetricsTieBreakers>
 </document>
