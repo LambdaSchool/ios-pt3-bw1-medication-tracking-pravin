@@ -118,7 +118,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="am8-2b-ku2">
-                        <barButtonItem key="leftBarButtonItem" title="Medicaton Tracker" id="tzu-SV-t1b"/>
+                        <barButtonItem key="leftBarButtonItem" title="Medication Tracker" id="tzu-SV-t1b"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus.rectangle.fill" catalog="system" id="qPC-nK-bWH">
                             <connections>
                                 <segue destination="WWh-an-VAz" kind="show" identifier="TrackMed" id="ocG-cB-Cow"/>
