@@ -41,7 +41,7 @@ class MedicationController {
         let fileManager = FileManager.default
         guard let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
         
-        return documentsDirectory.appendingPathComponent("shopping.plist")
+        return documentsDirectory.appendingPathComponent("medication.plist")
     }
     
     
@@ -52,19 +52,13 @@ class MedicationController {
         medicationItems.append(medicationItem)
     }
     
-    
-    func updateHasBeenAdded(for item: MedicationItem) {
-        guard let index = medicationItems.firstIndex(of: item) else { return }
-        medicationItems[index].hasBeenAdded = !medicationItems[index].hasBeenAdded
-    }
-    
     func updateHasBeenTaken(for item: MedicationItem) {
         guard let index = medicationItems.firstIndex(of: item) else { return }
         medicationItems[index].hasBeenTaken = !medicationItems[index].hasBeenTaken
     }
     
     private func setMedicationItems() {
-        let itemNames = ["Tumeric", "Cinnamon", "Multi-Vitamin", "Qnoul-COQ10", "Bayer Asprin", "Alegra-D"]
+        let itemNames = ["Amoxicillin", "Zocor", "Multi-Vitamin", "Qnoul-COQ10", "Bayer Asprin", "Alegra-D"]
         for name in itemNames {
             createMedicationItem(withName: name)
         }

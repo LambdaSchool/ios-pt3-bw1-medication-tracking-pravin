@@ -10,12 +10,10 @@ import Foundation
 
 struct MedicationItem: Equatable, Codable {
     var name: String
-    var hasBeenAdded: Bool
     var hasBeenTaken: Bool
     
-    init(withName name: String, withHasBeenAdded hasBeenAdded: Bool = false, withHasBeenTaken hasBeenTaken: Bool = false) {
+    init(withName name: String, withHasBeenTaken hasBeenTaken: Bool = false) {
         self.name = name
-        self.hasBeenAdded = hasBeenAdded
         self.hasBeenTaken = hasBeenTaken
     }
 }
