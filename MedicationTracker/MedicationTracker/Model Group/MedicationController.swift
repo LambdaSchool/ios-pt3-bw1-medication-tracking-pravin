@@ -48,7 +48,7 @@ class MedicationController {
     // MARK: - Methods
     
     func createMedicationItem(withName name: String) {
-        let medicationItem = MedicationItem(withName: name)
+        let medicationItem = MedicationItem(name: name)
         medicationItems.append(medicationItem)
     }
     
@@ -62,6 +62,8 @@ class MedicationController {
         for name in itemNames {
             createMedicationItem(withName: name)
         }
+        
+        saveToPersistent()
         
         let userDefaults = UserDefaults.standard
         userDefaults.set(true, forKey: medicationPreferenceKey)

@@ -24,7 +24,7 @@ class MedicationDetailViewController: UIViewController {
     // MARK: - Navigation
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let _ = self.medicationLabel.text,
-            let _ = self.dateLabel.text else { return }
+            let  _ = self.dateLabel.text else { return }
         if let medication = self.medication {
             self.medicationController?.updateHasBeenTaken(for: medication)
         }

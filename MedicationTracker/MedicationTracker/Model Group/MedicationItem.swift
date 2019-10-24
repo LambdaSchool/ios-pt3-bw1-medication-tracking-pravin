@@ -12,8 +12,11 @@ struct MedicationItem: Equatable, Codable {
     var name: String
     var hasBeenTaken: Bool
     
-    init(withName name: String, withHasBeenTaken hasBeenTaken: Bool = false) {
+    
+    init(name: String, hasBeenTaken: Bool = false) {
         self.name = name
         self.hasBeenTaken = hasBeenTaken
+        }    
     }
-}
+
+

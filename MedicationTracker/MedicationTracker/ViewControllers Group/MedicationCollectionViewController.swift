@@ -39,10 +39,8 @@ class MedicationCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? MedicationItemCollectionViewCell else { return UICollectionViewCell() }
         
-        let MedicationItem = self.medicationController.medicationItems[indexPath.item]
-        cell.nameLabel.text = MedicationItem.name
-        cell.imageView.image = UIImage(named: MedicationItem.name)
-        cell.hasBeenTaken.text = MedicationItem.hasBeenTaken ? "Taken" : "Not Taken"
+        let medicationItem = self.medicationController.medicationItems[indexPath.item]
+        cell.medicationItem = medicationItem
         cell.delegate = self
         
         return cell
