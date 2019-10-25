@@ -17,7 +17,7 @@ class MedicationCollectionViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collectionView.reloadData()
-        
+        print(medicationController.medicationItems.count)
     }
     
     // MARK: - Navigation
@@ -42,7 +42,8 @@ class MedicationCollectionViewController: UICollectionViewController {
         let medicationItem = self.medicationController.medicationItems[indexPath.item]
         cell.medicationItem = medicationItem
         cell.delegate = self
-        
+
+        //cell.imageView.image =  UIImage(contentsOfFile: "Zocor")
         return cell
     }
 }

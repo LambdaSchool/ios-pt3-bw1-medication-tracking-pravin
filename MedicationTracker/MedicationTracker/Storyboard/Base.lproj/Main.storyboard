@@ -118,7 +118,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="am8-2b-ku2">
-                        <barButtonItem key="leftBarButtonItem" title="Medicaton Tracker" id="tzu-SV-t1b">
+                        <barButtonItem key="leftBarButtonItem" title="Medication Tracker" id="tzu-SV-t1b">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus.rectangle.fill" catalog="system" id="qPC-nK-bWH">
@@ -151,12 +151,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GjO-cE-DbU" userLabel="Label">
-                                <rect key="frame" x="20" y="227" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="olU-GY-cwa">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="olU-GY-cwa">
                                 <rect key="frame" x="20" y="174" width="374" height="32"/>
                                 <segments>
                                     <segment title="Sun"/>
@@ -167,18 +162,22 @@
                                     <segment title="Fri"/>
                                     <segment title="Sat"/>
                                 </segments>
+                                <connections>
+                                    <action selector="dateControl:" destination="WWh-an-VAz" eventType="valueChanged" id="qCG-Au-x1n"/>
+                                </connections>
                             </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1v-0I-JWc">
+                                <rect key="frame" x="20" y="229" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="olU-GY-cwa" firstAttribute="top" secondItem="bpF-7M-R75" secondAttribute="top" constant="34" id="Grl-15-58h"/>
-                            <constraint firstItem="GjO-cE-DbU" firstAttribute="leading" secondItem="AZr-Dq-Tp8" secondAttribute="leading" id="VAn-X6-gha"/>
-                            <constraint firstItem="GjO-cE-DbU" firstAttribute="trailing" secondItem="AZr-Dq-Tp8" secondAttribute="trailing" id="Wrn-an-IeN"/>
                             <constraint firstItem="AZr-Dq-Tp8" firstAttribute="leading" secondItem="bpF-7M-R75" secondAttribute="leading" constant="20" id="gE5-ch-ZFk"/>
                             <constraint firstItem="bpF-7M-R75" firstAttribute="bottom" secondItem="AZr-Dq-Tp8" secondAttribute="bottom" constant="13" id="ir2-UG-3Sr"/>
-                            <constraint firstItem="AZr-Dq-Tp8" firstAttribute="top" secondItem="GjO-cE-DbU" secondAttribute="bottom" constant="24" id="miS-mY-K2g"/>
-                            <constraint firstItem="olU-GY-cwa" firstAttribute="trailing" secondItem="GjO-cE-DbU" secondAttribute="trailing" id="sFe-MP-6Gz"/>
-                            <constraint firstItem="olU-GY-cwa" firstAttribute="leading" secondItem="GjO-cE-DbU" secondAttribute="leading" id="uTq-zX-7rs"/>
                             <constraint firstItem="bpF-7M-R75" firstAttribute="trailing" secondItem="AZr-Dq-Tp8" secondAttribute="trailing" constant="20" id="vqS-ej-b16"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bpF-7M-R75"/>
@@ -191,7 +190,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="dateLabel" destination="GjO-cE-DbU" id="qaD-12-Y6r"/>
+                        <outlet property="medicationTextField" destination="o1v-0I-JWc" id="vZK-Vk-dDr"/>
+                        <outlet property="trackMedicine" destination="AZr-Dq-Tp8" id="trg-HS-SFg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCn-UI-WNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

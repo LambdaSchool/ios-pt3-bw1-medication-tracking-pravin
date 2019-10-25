@@ -11,11 +11,18 @@ import Foundation
 class MedicationController {
     
     init() {
-        if self.medicationItemsPreference == false {
-            self.setMedicationItems()
-        } else {
+//        if self.medicationItemsPreference == false {
+//            self.setMedicationItems()
+//        } else {
             self.loadFromPersistent()
-        }
+//        }
+//
+//        // test code
+//        setMedicationItems()
+//        print(medicationItems.count)
+//
+        
+        
     }
     
     
@@ -48,7 +55,7 @@ class MedicationController {
     // MARK: - Methods
     
     func createMedicationItem(withName name: String) {
-        let medicationItem = MedicationItem(name: name)
+        let medicationItem = MedicationItem(named: name, trackMedicine: " ")
         medicationItems.append(medicationItem)
     }
     

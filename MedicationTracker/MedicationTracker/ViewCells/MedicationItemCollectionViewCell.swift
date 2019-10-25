@@ -32,7 +32,5 @@ class MedicationItemCollectionViewCell: UICollectionViewCell {
         self.nameLabel.text = medicationItem.name
         self.imageView.image = UIImage(named: medicationItem.name)
         self.hasBeenTaken.text = medicationItem.hasBeenTaken ? "Taken" : "Not Taken"
-    }
-    
+    }    
 }
-

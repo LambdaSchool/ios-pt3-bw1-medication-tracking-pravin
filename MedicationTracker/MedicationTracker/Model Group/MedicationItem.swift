@@ -10,13 +10,14 @@ import Foundation
 
 struct MedicationItem: Equatable, Codable {
     var name: String
+    var trackMedicine: String
     var hasBeenTaken: Bool
+   // var weekday: String
     
     
-    init(name: String, hasBeenTaken: Bool = false) {
+    init(named name: String, trackMedicine: String, hasBeenTaken: Bool = false) { // weekday
         self.name = name
         self.hasBeenTaken = hasBeenTaken
-        }    
+        self.trackMedicine = trackMedicine
     }
-
-
+}
