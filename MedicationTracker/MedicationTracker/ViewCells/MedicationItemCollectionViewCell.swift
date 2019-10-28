@@ -28,10 +28,9 @@ class MedicationItemCollectionViewCell: UICollectionViewCell {
     
     private func updateViews() {
         guard let medicationItem = self.medicationItem else { return }
-        
+
         self.nameLabel.text = medicationItem.name
         self.imageView.image = UIImage(named: medicationItem.name)
         self.hasBeenTaken.text = medicationItem.hasBeenTaken ? "Taken" : "Not Taken"
-    }
-    
+    }    
 }
