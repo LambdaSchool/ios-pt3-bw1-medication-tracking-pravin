@@ -11,17 +11,11 @@ import Foundation
 class MedicationController {
     
     init() {
-//        if self.medicationItemsPreference == false {
-//            self.setMedicationItems()
-//        } else {
+
             self.loadFromPersistent()
-//        }
-//
 //        // test code
 //        setMedicationItems()
 //        print(medicationItems.count)
-//
-        
         
     }
     
